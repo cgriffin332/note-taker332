@@ -1,7 +1,8 @@
 // ===============================================================================
 // LOAD DATA
 
-var noteData = require("../db/db");
+var noteData = require("../db/db.json");
+const fs = require("fs");
 
 
 // ===============================================================================
@@ -22,9 +23,19 @@ module.exports = function(app) {
 
   app.post("/api/notes", function(req, res) {
     // post note data
-   
-      noteData.push(req.body);
-      res.json(true);
+        console.log(req.body)
+        fs.readFile("./db/db.json", "utf-8", (err, data)=>{
+            if(err) throw err;
+            console.log(data)
+            const updatedData = JSON.parse(data);
+            updatedData.push(req.body);
+            console.log(updatedData);
+            fs.writeFile("./db/db.json", JSON.stringify(updatedData), (err)=>{
+                if (err) throw err;
+            })
+        })
+      
+    //   res.json(true);
 
   });
 
