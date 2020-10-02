@@ -57,9 +57,7 @@ module.exports = function (app) {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
       if (err) throw err;
       const updatedData = JSON.parse(data);
-      const filteredNotes = updatedData.filter((note) => {
-        return req.params.id !== note.id;
-      });
+      const filteredNotes = updatedData.filter((note) =>  req.params.id !== note.id);
       fs.writeFile(
         "./db/db.json",
         JSON.stringify(filteredNotes, null, "\t"),
