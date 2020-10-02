@@ -21,10 +21,23 @@ All you need to do is click this link: https://notetaker-calvin-griffin.herokuap
 ## Usage
 
 When the application opens, you are taken to the title page. 
-Once the user clicks the "Get Started" button, they are navigated to the notes page where they can write their notes.  
-Once the note is written, click the save button and your note will appear in a list on the left side of the screen.  
+![Image of Start](./public/images/note1.png)
+
+Once the user clicks the "Get Started" button, they are navigated to the notes page where they can write their notes. 
+![Image of Note Page](./public/images/note2.png)
+
+Once the note is written, click the save button and the note will appear in a list on the left side of the screen.  
+![Image of Take Note](./public/images/note3.png)
+![Image of Save](./public/images/note4.png)
+
 At any time, the user can click on a note in the list on the left, and that note will appear on the page again. 
-If the user would like to then write another note, they can click the write icon. Once the user wishes to delete a note, they click the delete icon next to the corresponding note.
+![Image of Recall](./public/images/note6.png)
+
+If the user would like to then write another note, they can click the write icon. 
+![Image of Write](./public/images/note7.png)
+
+Once the user wishes to delete a note, they click the delete icon next to the corresponding note.
+![Image of Delete](./public/images/note8.png)
 
 ## License
 
