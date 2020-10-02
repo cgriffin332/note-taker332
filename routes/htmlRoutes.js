@@ -5,16 +5,16 @@ var path = require("path");
 // ===============================================================================
 // ROUTING
 
-module.exports = function (app) {
+module.exports = (app) => {
   // HTML GET Requests
   //--------------------------------------------------------------------------
   // go to notes page
-  app.get("/notes", function (req, res) {
+  app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/notes.html"));
   });
 
   // go to homepage
-  app.get("*", function (req, res) {
+  app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 };

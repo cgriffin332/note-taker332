@@ -1,19 +1,17 @@
-// ===============================================================================
 // LOAD DATA
 
-var noteData = require("../db/db.json");
 const fs = require("fs");
-var path = require("path");
+const path = require("path");
+//random id generator
 const { v4: uuidv4 } = require("uuid");
 
-// ===============================================================================
 // ROUTING
 // ===============================================================================
 
-module.exports = function (app) {
-  // API GET Requests
+module.exports = (app) => {
+  // API GET Request
 
-  app.get("/api/notes", function (req, res) {
+  app.get("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
       if (err) throw err;
       const updatedData = JSON.parse(data);
@@ -21,20 +19,18 @@ module.exports = function (app) {
     });
   });
 
-  // API POST Requests
-  //---------------------------------------------------------------------------
+  // API POST Request
 
-  app.post("/api/notes", function (req, res) {
-    // post note data
-    console.log(req.body);
+  app.post("/api/notes", (req, res) => {
     // give each note unique id
     req.body.id = uuidv4();
+    // read old list
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
       if (err) throw err;
-      console.log(data);
       const updatedData = JSON.parse(data);
+      //add new note to array
       updatedData.push(req.body);
-      console.log(updatedData);
+      // write it to html
       fs.writeFile(
         "./db/db.json",
         JSON.stringify(updatedData, null, "\t"),
@@ -44,23 +40,22 @@ module.exports = function (app) {
         }
       );
     });
-
-    //   res.json(true);
   });
 
   // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
-
-  app.delete("/api/notes/:id", function (req, res) {
-    // Empty out the arrays of data
+  // delete note
+  app.delete("/api/notes/:id", (req, res) => {
+    // read and compare id of note user clicked and array of notes
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
       if (err) throw err;
       const updatedData = JSON.parse(data);
-      const filteredNotes = updatedData.filter((note) =>  req.params.id !== note.id);
+      const filteredNotes = updatedData.filter(
+        (note) => req.params.id !== note.id
+      );
+      // write to db file
       fs.writeFile(
         "./db/db.json",
-        JSON.stringify(filteredNotes, null, "\t"),
+        JSON.stringify(filteredNotes, null, 2),
         (err) => {
           if (err) throw err;
           res.sendFile(path.join(__dirname, "../public/notes.html"));

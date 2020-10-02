@@ -1,1 +1,27 @@
-[]
+[
+	{
+		"title": "Learn German",
+		"text": "Work on dialogue",
+		"id": "be887dc1-7459-43b5-9787-644e9ed43e74"
+	},
+	{
+		"title": "Make Dinner",
+		"text": "Steak and potatoes!",
+		"id": "37a763f1-403d-4449-a3db-60497663b23f"
+	},
+	{
+		"title": "Do the Dishes",
+		"text": "Clean them ",
+		"id": "98e7a443-91ec-4002-8202-86eab8328bec"
+	},
+	{
+		"title": "Play Golf",
+		"text": "Try not to three putt",
+		"id": "1c0c1504-8aef-4710-add4-d094957b1257"
+	},
+	{
+		"title": "Drink Bourbon ",
+		"text": "Maker's",
+		"id": "63e17a84-bdd8-4755-ae62-1e12e1b37c69"
+	}
+]
