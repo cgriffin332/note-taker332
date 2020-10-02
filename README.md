@@ -1,4 +1,5 @@
 # Note-Taker332
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
@@ -7,33 +8,34 @@ This application can be used to write, save, and delete notes using an express b
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#Contributing)
-* [Tests](#tests)
-* [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#Contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
-All you need to do is click this link: https://notetaker-calvin-griffin.herokuapp.com/
+All you need to do is click this link:<br />
+https://notetaker-calvin-griffin.herokuapp.com/
 
 ## Usage
 
-When the application opens, you are taken to the title page. 
+When the application opens, you are taken to the title page.
 ![Image of Start](./public/images/note1.png)
 
-Once the user clicks the "Get Started" button, they are navigated to the notes page where they can write their notes. 
+Once the user clicks the "Get Started" button, they are navigated to the notes page where they can write their notes.
 ![Image of Note Page](./public/images/note2.png)
 
 Once the note is written, click the save button and the note will appear in a list on the left side of the screen.  
 ![Image of Take Note](./public/images/note3.png)
 ![Image of Save](./public/images/note4.png)
 
-At any time, the user can click on a note in the list on the left, and that note will appear on the page again. 
+At any time, the user can click on a note in the list on the left, and that note will appear on the page again.
 ![Image of Recall](./public/images/note6.png)
 
-If the user would like to then write another note, they can click the write icon. 
+If the user would like to then write another note, they can click the write icon.
 ![Image of Write](./public/images/note7.png)
 
 Once the user wishes to delete a note, they click the delete icon next to the corresponding note.
